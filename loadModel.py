@@ -7,6 +7,6 @@ client = Client(
     headers={'x-some-header':'some-value'}
     )
 
-response = client.generate(model='deepseek-r1:32b')
+response = client.chat(model="qwen2.5-coder:32b", messages=[{"role": "user", "content": "What is your version"}])
 
 print(response.message)
